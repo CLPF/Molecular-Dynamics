@@ -28,3 +28,13 @@ Are you sure you want to continue connecting (yes/no)?
 ```Bash
 	tleap -s -f leap.in
 ```
+Error
+
+```Bash
+Opening /shared/amber16/dat/leap/prep/cree.top: Permission denied
+Opening /shared/amber16/dat/leap/lib/cree.top: Permission denied
+Opening /shared/amber16/dat/leap/parm/cree.top: Permission denied
+Opening /shared/amber16/dat/leap/cmd/cree.top: Permission denied
+Could not open file cree.top: system error
+saveAmberParm: Could not open file: cree.top
+```
