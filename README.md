@@ -23,4 +23,8 @@ Are you sure you want to continue connecting (yes/no)?
 # pongo yes
 ```
 
-3. tleap -s -f leap.in
+3. Comando tleap
+
+```Bash
+	tleap -s -f leap.in
+```
