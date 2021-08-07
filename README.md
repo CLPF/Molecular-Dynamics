@@ -1,6 +1,6 @@
 # Molecular-Dynamics
 1. Entrar al cluster SBG-UNQ con: 
-<code> ssh -p 2222 cpadilla@207.248.75.21
+<pre> ssh -p 2222 cpadilla@207.248.75.21
 2. Cambiar en el cluster a @1rick: con:
 <code> ssh 10.6.0.42
 Note: Me largó lo siguiente
