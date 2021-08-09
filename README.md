@@ -45,7 +45,7 @@ El error se debia a permisos de usuario
 ```Bash
 	tleap -s -f tleap.in
 ```
-Corrio y al final escribi "quit"
+Corrió y al final escribí "quit"
 
 ```Bash
 -I: Adding /shared/amber16/dat/leap/prep to search path.
