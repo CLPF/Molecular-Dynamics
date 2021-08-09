@@ -124,3 +124,5 @@ Marking per-residue atom chain types.
 > quit
         Quit
 ```
+Se crearon los siguientes archivos: leap.log rsme.crd rsme.top 
+
