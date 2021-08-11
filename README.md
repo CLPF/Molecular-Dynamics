@@ -126,3 +126,14 @@ Marking per-residue atom chain types.
 ```
 Se crearon los siguientes archivos: leap.log rsme.crd rsme.top 
 
+5. Realizo la Minimización
+
+ a. Muevo los archivos `rsme.crd y rsme.top` generados en la carpeta genero a la carpeta min
+ b. Modifico el archivo min.sh con los nombres de llos archivos
+
+ ```Bash
+	#de esto
+  sander -O -i min.in -o minout -p .op -c .crd -r min.crd
+  #a esto
+  sander -O -i min.in -o minout -p rsme.top -c rsme.crd -r min.crd
+```
