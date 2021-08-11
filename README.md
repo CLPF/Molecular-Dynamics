@@ -227,3 +227,48 @@ Daniel R. Roe and Thomas E. Cheatham, III, "PTRAJ and CPPTRAJ: Software for
   Theory Comput., 2013, 9 (7), pp 3084-3095.
   ```
 Se generó el archivo `min.pdb`
+ ```Bash
+  1         2        3        4      5      6      7     8     9
+CRYST1   67.185   59.860   65.364  90.00  90.00  90.00               1
+ATOM      1  N   MET     1      39.390  43.298  43.306  1.00  0.00           N
+ATOM      2  CA  MET     1      38.831  41.956  43.029  1.00  0.00           C
+ATOM      3  CB  MET     1      39.504  41.353  41.779  1.00  0.00           C
+ATOM      4  CG  MET     1      38.645  40.343  41.010  1.00  0.00           C
+...
+```
+
+
+
+5. Calentamiento
+- Para poder llevar a cabo el Calentamiento necesito......, por tal motivo me logeo en
+```Bash
+su aormazabal
+pas: 4321aormazabal
+ssh aormazabal@10.6.0.45
+cd carla
+```
+- Paso las carpetas `genero, min y heat` a esta nueva dirección con
+```Bash
+scp -r cpadilla@10.6.0.41:~/heat .
+```
+- Corroboro en que CPU puedo trabajar con (El que está a menor temperatura)
+```Bash
+nvidia-smi
+```
+- Modifico el nombre de los archivos
+```Bash
+#de esto
+#!/bin/bash
+export CUDA_VISIBLE_DEVICES="0"
+taskset -c 2 pmemd.cuda -O -i heat.0.in -o heat.0.out -p ../genero/rmse.crd -c ../min/min.crd -r heat0.crd -ref ../min/min.crd
+taskset -c 2 pmemd.cuda -O -i heat.1.in -o heat.1.out -p ../genero/rmse.crd -c heat0.crd -r heat1.crd
+#a esto
+#!/bin/bash
+export CUDA_VISIBLE_DEVICES="0"
+taskset -c 2 pmemd.cuda -O -i heat.0.in -o heat.0.out -p ../genero/rmse.crd -c ../min/min.crd -r heat0.crd -ref ../min/min.crd
+taskset -c 2 pmemd.cuda -O -i heat.1.in -o heat.1.out -p ../genero/rmse.crd -c heat0.crd -r heat1.crd
+```
+- Largo el calentamiento con
+```Bash
+nohup heat.sh &
+```
