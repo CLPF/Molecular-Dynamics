@@ -8,22 +8,22 @@
 	ssh -p 2222 cpadilla@207.248.75.21
 ```
 
-2. Cambiar en el cluster a @1rick: con:
+Nota: puedo cambiar en el cluster a @1rick: con:
 
 ```Bash
 	ssh 10.6.0.42
 ```
 
-Note: Me largó lo siguiente
+Me largó lo siguiente
 
 ```Bash
 	The authenticity of host '10.6.0.42 (10.6.0.42)' can't be established.
 ECDSA key fingerprint is SHA256:ZQXFe6z3isC6lLTr39CvE8w7ySxDUNZ4yrnqdFcWhtg.
 Are you sure you want to continue connecting (yes/no)? 
-# pongo yes
+  # pongo yes
 ```
-
-3. Comando tleap
+2. Bajar la proteina del protein data bank (en este caso parto de la proteina `RsmE.pdb`)
+3. Genero los archivos de topología y coordenadas con el comando `tleap`
 
 ```Bash
 	tleap -s -f leap.in
@@ -40,7 +40,7 @@ saveAmberParm: Could not open file: cree.top
 ```
 El error se debia a permisos de usuario
 
-4. Corri otra proteina para probar con nuevos permisos de usuario. Largue en @rick: (archivos iniciales: leaprc.ff99SB RsmE.pdb tleap.in)
+- Largue en @rick: (archivos iniciales: `leaprc.ff99SB RsmE.pdb tleap.in`)
 
 ```Bash
 	tleap -s -f tleap.in
@@ -124,9 +124,9 @@ Marking per-residue atom chain types.
 > quit
         Quit
 ```
-Se crearon los siguientes archivos: leap.log rsme.crd rsme.top 
+Se crearon los siguientes archivos: `leap.log rsme.crd rsme.top`
 
-5. Realizo la Minimización
+4. Realizo la Minimización
 
  - Muevo los archivos `rsme.crd y rsme.top` generados en la carpeta "genero" a la carpeta "min". Parto de los siguientes archivos: `min.in  min.sh  rsme.crd  rsme.top  sc`
  - En la carpeta "min", modifico el archivo min.sh con `nano o vi min.sh` los nombres de los archivos de la siguiente manera
