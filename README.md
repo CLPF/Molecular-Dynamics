@@ -143,9 +143,17 @@ Se crearon los siguientes archivos: leap.log rsme.crd rsme.top
 nohup sh ./min.sh &
 ```
 Se generan los archivos: `min.crd mdinfo minout nohup.out` 
-- Despues del minimizado corro
+- Modifico el archivo sc con los archivos correspondientes
+
+ ```Bash
+parm rsme.top
+trajin min.crd
+strip :WAT
+trajout min.pdb
+```
+Largo el siguiente comando
 
  ```Bash
 cpptraj -i sc
 ```
-El cpptraj es de analisis de trayectorias. Tengo que modificarle los nombres adentro y una vez que corra se genera el pdb minimizado
+El cpptraj es de analisis de trayectorias. Una vez que corra se genera el pdb minimizado
