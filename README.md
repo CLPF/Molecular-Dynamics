@@ -40,7 +40,7 @@ saveAmberParm: Could not open file: cree.top
 ```
 El error se debia a permisos de usuario
 
-- Largue en @rick: (archivos iniciales: `leaprc.ff99SB RsmE.pdb tleap.in`)
+- Largue en @rick::~/genero$ (archivos iniciales: `leaprc.ff99SB RsmE.pdb tleap.in`)
 
 ```Bash
 	tleap -s -f tleap.in
@@ -126,7 +126,7 @@ Marking per-residue atom chain types.
 ```
 Se crearon los siguientes archivos: `leap.log rsme.crd rsme.top`
 
-4. Realizo la Minimización
+4. Realizo la Minimización en @rick::~/min$
 
  - Muevo los archivos `rsme.crd y rsme.top` generados en la carpeta "genero" a la carpeta "min". Parto de los siguientes archivos: `min.in  min.sh  rsme.crd  rsme.top  sc`
  - En la carpeta "min", modifico el archivo min.sh con `nano o vi min.sh` los nombres de los archivos de la siguiente manera
