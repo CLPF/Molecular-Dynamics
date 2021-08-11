@@ -129,7 +129,7 @@ Se crearon los siguientes archivos: leap.log rsme.crd rsme.top
 5. Realizo la Minimización
 
  - Muevo los archivos `rsme.crd y rsme.top` generados en la carpeta genero a la carpeta min
- - Modifico el archivo min.sh con los nombres de llos archivos
+ - En la carpeta min, modifico el archivo min.sh con los nombres de llos archivos 
 
  ```Bash
 	#de esto
