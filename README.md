@@ -128,8 +128,8 @@ Se crearon los siguientes archivos: leap.log rsme.crd rsme.top
 
 5. Realizo la Minimización
 
- - Muevo los archivos `rsme.crd y rsme.top` generados en la carpeta genero a la carpeta min
- - En la carpeta min, modifico el archivo min.sh con `nano o vi min.sh` los nombres de los archivos de la siguiente manera
+ - Muevo los archivos `rsme.crd y rsme.top` generados en la carpeta "genero" a la carpeta "min". Parto de los siguientes archivos: `min.in  min.sh  rsme.crd  rsme.top  sc`
+ - En la carpeta "min", modifico el archivo min.sh con `nano o vi min.sh` los nombres de los archivos de la siguiente manera
 
  ```Bash
 	#de esto
@@ -142,6 +142,7 @@ Se crearon los siguientes archivos: leap.log rsme.crd rsme.top
  ```Bash
 nohup sh ./min.sh &
 ```
+Se generan los archivos: `min.crd mdinfo minout nohup.out` 
 - Despues del minimizado corro
 
  ```Bash
