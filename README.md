@@ -149,7 +149,7 @@ nohup: ignoring input and appending output to 'nohup.out'
 ```
 Se generan los archivos: `min.crd mdinfo minout nohup.out` 
 
-- Modifico el archivo sc con los archivos correspondientes
+- Modifico el archivo sc con los archivos correspondientes `rsme.top min.crd y cambio a min.pdb de salida`
 
  ```Bash
 parm rsme.top
@@ -226,3 +226,4 @@ Daniel R. Roe and Thomas E. Cheatham, III, "PTRAJ and CPPTRAJ: Software for
   Processing and Analysis of Molecular Dynamics Trajectory Data". J. Chem.
   Theory Comput., 2013, 9 (7), pp 3084-3095.
   ```
+Se generó el archivo `min.pdb`
