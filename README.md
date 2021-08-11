@@ -142,7 +142,13 @@ Se crearon los siguientes archivos: leap.log rsme.crd rsme.top
  ```Bash
 nohup sh ./min.sh &
 ```
+Results
+ ```Bash
+[1] 54160
+nohup: ignoring input and appending output to 'nohup.out'
+```
 Se generan los archivos: `min.crd mdinfo minout nohup.out` 
+
 - Modifico el archivo sc con los archivos correspondientes
 
  ```Bash
@@ -151,9 +157,72 @@ trajin min.crd
 strip :WAT
 trajout min.pdb
 ```
-Largo el siguiente comando
+- Largo el comando `cpptraj` de analisis de trayectorias. Una vez que corra se genera el pdb minimizado
 
  ```Bash
 cpptraj -i sc
 ```
-El cpptraj es de analisis de trayectorias. Una vez que corra se genera el pdb minimizado
+
+Results
+ ```Bash
+CPPTRAJ: Trajectory Analysis. V17.00
+    ___  ___  ___  ___
+     | \/ | \/ | \/ |
+    _|_/\_|_/\_|_/\_|_
+
+| Date/time: 08/11/21 03:01:30
+| Available memory: 34.842 GB
+
+INPUT: Reading input from 'sc'
+  [parm rsme.top]
+        Reading 'rsme.top' as Amber Topology
+        Radius Set: modified Bondi radii (mbondi)
+  [trajin min.crd]
+        Reading 'min.crd' as Amber NC Restart
+  [strip :WAT]
+    STRIP: Stripping atoms in mask [:WAT]
+  [trajout min.pdb]
+        Writing 'min.pdb' as PDB
+---------- RUN BEGIN -------------------------------------------------
+
+PARAMETER FILES (1 total):
+ 0: rsme.top, 20244 atoms, 6500 res, box: Orthogonal, 6442 mol, 6441 solvent
+
+INPUT TRAJECTORIES (1 total):
+ 0: 'min.crd' is a NetCDF AMBER restart file, Parm rsme.top (Orthogonal box) (reading 1 of 1)
+  Coordinate processing will occur on 1 frames.
+
+OUTPUT TRAJECTORIES (1 total):
+  'min.pdb' (1 frames) is a PDB file
+
+BEGIN TRAJECTORY PROCESSING:
+.....................................................
+ACTION SETUP FOR PARM 'rsme.top' (1 actions):
+  0: [strip :WAT]
+        Stripping 19323 atoms.
+        Stripped topology: 921 atoms, 59 res, box: Orthogonal, 1 mol
+Warning: No PDB space group specified.
+----- min.crd (1-1, 1) -----
+100% Complete.
+
+Read 1 frames and processed 1 frames.
+TIME: Avg. throughput= 178.6352 frames / second.
+
+ACTION OUTPUT:
+
+RUN TIMING:
+TIME:           Init               : 0.0000 s (  0.60%)
+TIME:           Trajectory Process : 0.0056 s ( 98.12%)
+TIME:           Action Post        : 0.0000 s (  0.00%)
+TIME:           Analysis           : 0.0000 s (  0.00%)
+TIME:           Data File Write    : 0.0000 s (  0.02%)
+TIME:           Other              : 0.0001 s (  0.01%)
+TIME:   Run Total 0.0057 s
+---------- RUN END ---------------------------------------------------
+TIME: Total execution time: 0.1203 seconds.
+--------------------------------------------------------------------------------
+To cite CPPTRAJ use:
+Daniel R. Roe and Thomas E. Cheatham, III, "PTRAJ and CPPTRAJ: Software for
+  Processing and Analysis of Molecular Dynamics Trajectory Data". J. Chem.
+  Theory Comput., 2013, 9 (7), pp 3084-3095.
+  ```
