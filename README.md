@@ -129,7 +129,7 @@ Se crearon los siguientes archivos: leap.log rsme.crd rsme.top
 5. Realizo la Minimización
 
  - Muevo los archivos `rsme.crd y rsme.top` generados en la carpeta genero a la carpeta min
- - En la carpeta min, modifico el archivo min.sh con `vi min.sh` los nombres de los archivos de la siguiente manera
+ - En la carpeta min, modifico el archivo min.sh con `nano o vi min.sh` los nombres de los archivos de la siguiente manera
 
  ```Bash
 	#de esto
@@ -137,3 +137,14 @@ Se crearon los siguientes archivos: leap.log rsme.crd rsme.top
   #a esto
   sander -O -i min.in -o minout -p rsme.top -c rsme.crd -r min.crd
 ```
+- Largo la minimización con el siguiente comando
+
+ ```Bash
+nohup sh ./min.sh &
+```
+- Despues del minimizado corro
+
+ ```Bash
+cpptraj -i sc
+```
+El cpptraj es de analisis de trayectorias. Tengo que modificarle los nombres adentro y una vez que corra se genera el pdb minimizado
