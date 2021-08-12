@@ -227,16 +227,8 @@ Daniel R. Roe and Thomas E. Cheatham, III, "PTRAJ and CPPTRAJ: Software for
   Theory Comput., 2013, 9 (7), pp 3084-3095.
   ```
 Se generó el archivo `min.pdb`
- ```Bash
-  1         2        3        4      5      6      7     8     9
-CRYST1   67.185   59.860   65.364  90.00  90.00  90.00               1
-ATOM      1  N   MET     1      39.390  43.298  43.306  1.00  0.00           N
-ATOM      2  CA  MET     1      38.831  41.956  43.029  1.00  0.00           C
-ATOM      3  CB  MET     1      39.504  41.353  41.779  1.00  0.00           C
-ATOM      4  CG  MET     1      38.645  40.343  41.010  1.00  0.00           C
-...
-```
-
+Ejemplo
+![min.pdb](imagen0.bmp)
 
 
 5. Calentamiento
