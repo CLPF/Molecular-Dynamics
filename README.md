@@ -51,7 +51,16 @@ El error se debia a permisos de usuario
 ```Bash
 	tleap -s -f tleap.in
 ```
-Corrió y al final escribí "quit"
+¿Que contiene `tleap.in`?
+```Bash
+source leaprc.ff99SB 
+lit= loadPdb RsmE.pdb
+solvateBox lit TIP3PBOX 12
+saveAmberParm lit rsme.top rsme.crd
+[1]+  Done                    nohup sh heat.sh
+```
+
+- Corrió y al final escribí "quit"
 
 ```Bash
 -I: Adding /shared/amber16/dat/leap/prep to search path.
