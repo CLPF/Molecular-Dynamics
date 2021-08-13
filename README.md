@@ -23,7 +23,12 @@ ECDSA key fingerprint is SHA256:ZQXFe6z3isC6lLTr39CvE8w7ySxDUNZ4yrnqdFcWhtg.
 Are you sure you want to continue connecting (yes/no)? 
   # pongo yes
 ```
+---
+
 2. Bajar la proteina del protein data bank (en este caso parto de la proteina `RsmE.pdb`)
+
+---
+
 3. Genero los archivos de topología y coordenadas con el comando `tleap`
 
 ```Bash
@@ -126,6 +131,8 @@ Marking per-residue atom chain types.
         Quit
 ```
 Se crearon los siguientes archivos: `leap.log rsme.crd rsme.top`
+
+---
 
 4. Realizo la Minimización en @rick::~/min$
 
@@ -231,6 +238,7 @@ Se generó el archivo `min.pdb`
 Ejemplo
 ![min.pdb](imagen0.bmp)
 
+---
 
 5. Calentamiento
 - Para poder llevar a cabo el Calentamiento necesito......, por tal motivo me logeo en
