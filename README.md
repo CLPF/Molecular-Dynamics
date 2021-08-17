@@ -280,5 +280,5 @@ taskset -c 2 pmemd.cuda -O -i heat.1.in -o heat.1.out -p ../genero/rmse.crd -c h
 ```
 - Largo el calentamiento con
 ```Bash
-nohup heat.sh &
+nohup sh heat.sh &
 ```
