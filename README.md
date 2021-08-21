@@ -164,6 +164,7 @@ Results
 [1] 54160
 nohup: ignoring input and appending output to 'nohup.out'
 ```
+> hacer doble enter
 Se generan los archivos: `min.crd mdinfo minout nohup.out` 
 
 - Modifico el archivo sc con los archivos correspondientes `rsme.top min.crd y cambio a min.pdb de salida`
