@@ -268,16 +268,10 @@ nvidia-smi
 ```
 - Modifico el nombre de los archivos
 ```Bash
-#de esto
 #!/bin/bash
 export CUDA_VISIBLE_DEVICES="0"
-taskset -c 2 pmemd.cuda -O -i heat.0.in -o heat.0.out -p ../genero/rmse.crd -c ../min/min.crd -r heat0.crd -ref ../min/min.crd
-taskset -c 2 pmemd.cuda -O -i heat.1.in -o heat.1.out -p ../genero/rmse.crd -c heat0.crd -r heat1.crd
-#a esto
-#!/bin/bash
-export CUDA_VISIBLE_DEVICES="0"
-taskset -c 2 pmemd.cuda -O -i heat.0.in -o heat.0.out -p ../genero/rmse.crd -c ../min/min.crd -r heat0.crd -ref ../min/min.crd
-taskset -c 2 pmemd.cuda -O -i heat.1.in -o heat.1.out -p ../genero/rmse.crd -c heat0.crd -r heat1.crd
+taskset -c 2 pmemd.cuda -O -i heat.0.in -o heat.0.out -p ../genero/rmse.top -c ../min/min.crd -r heat0.crd -ref ../min/min.crd
+taskset -c 2 pmemd.cuda -O -i heat.1.in -o heat.1.out -p ../genero/rmse.top -c heat0.crd -r heat1.crd
 ```
 - Largo el calentamiento con
 ```Bash
