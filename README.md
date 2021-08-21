@@ -267,6 +267,7 @@ scp -r cpadilla@10.6.0.41:~/heat .
 nvidia-smi
 ```
 - Modifico el nombre de los archivos
+Parto de los archivos `heat.0.in  heat.1.in  heat.sh`
 ```Bash
 #!/bin/bash
 export CUDA_VISIBLE_DEVICES="0"
@@ -277,3 +278,10 @@ taskset -c 2 pmemd.cuda -O -i heat.1.in -o heat.1.out -p ../genero/rmse.top -c h
 ```Bash
 nohup sh heat.sh &
 ```
+Results
+ ```Bash
+[1] 26677
+nohup: ignoring input and appending output to ‘nohup.out’
+```
+> hacer doble enter
+Se generan los archivos: `heat.0.out  heat.1.out  mdcrd  mdinfo  nohup.out` 
