@@ -1,21 +1,8 @@
 # Molecular-Dynamics
 https://ambermd.org/tutorials/basic/tutorial0/index.php
 
-## Trabajar en el Cluster de UNQ
 
-1. Entrar al cluster de UNQ con: 
-
-```Bash
-	ssh -p 2222 cpadilla@207.248.75.21
-```
-
-Nota: puedo cambiar en el cluster a @1rick: con:
-
-```Bash
-	ssh 10.6.0.42
-```
-
-Me largó lo siguiente
+lo siguiente
 
 ```Bash
 	The authenticity of host '10.6.0.42 (10.6.0.42)' can't be established.
